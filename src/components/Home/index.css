@@ -1,0 +1,126 @@
+* {
+  font-family: roboto;
+}
+.home-main-background {
+  display: flex;
+  flex-direction: column;
+}
+.navbar-section {
+  background-color: #272727;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.navbar-logo {
+  width: 75px;
+}
+@media screen and (min-width: 576px) {
+  .navbar-section {
+    padding: 20px;
+  }
+  .navbar-logo {
+    width: 100px;
+  }
+}
+
+.large-devices-buttons {
+  display: none;
+}
+@media screen and (min-width: 576px) {
+  .small-devices-buttons {
+    display: none;
+  }
+  .large-devices-buttons {
+    display: block;
+  }
+}
+.logout-button-large-devices {
+  display: none;
+}
+
+.logout-icon-small-devices {
+}
+@media screen and (min-width: 576px) {
+  .logout-icon-small-devices {
+    display: none;
+  }
+  .logout-button-large-devices {
+    display: block;
+    background-color: #6366f1;
+    border: none;
+    border-radius: 5px;
+    color: #f8fafc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 90px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}
+.home-jobs-button {
+  background-color: transparent;
+  color: #f8fafc;
+  font-weight: 400;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.icon-button {
+  background-color: transparent;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.icons-color {
+  color: #f8fafc;
+  font-size: 22px;
+}
+.home-background {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/home-sm-bg.png');
+  background-size: cover;
+  height: 100vh;
+  line-height: 2;
+  padding: 25px 10px 10px 15px;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 576px) {
+  .home-background {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
+    padding: 25px 10px 10px 50px;
+    line-height: 1.5;
+  }
+}
+.find-jobs-button {
+  background-color: #6366f1;
+  border: none;
+  border-radius: 5px;
+  color: #f8fafc;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 90px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.home-heading {
+  color: #f8fafc;
+
+  font-size: 32px;
+}
+.home-description {
+  color: #f8fafc;
+  font-size: 16px;
+}
+@media screen and (min-width: 576px) {
+  .home-heading {
+    font-size: 64px;
+    width: 50%;
+  }
+  .home-description {
+    font-size: 20px;
+    width: 50%;
+  }
+}

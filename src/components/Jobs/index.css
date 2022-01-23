@@ -1,0 +1,203 @@
+* {
+  font-family: roboto;
+}
+
+.jobs-main-background {
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+@media screen and (min-width: 576px) {
+  .jobs-main-background {
+    flex-direction: row;
+    padding: 30px 50px 30px 50px;
+  }
+}
+.profile-background {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+  background-size: cover;
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 15px;
+  height: 150px;
+  margin-bottom: 15px;
+}
+hr {
+  width: 100%;
+  border: 1px solid #475569;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.search-box-container {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #475569;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.search-box-container-large {
+  display: none;
+}
+@media screen and (min-width: 576px) {
+  .search-box-container-large {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #475569;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    max-width: 450px;
+  }
+  .search-box-container {
+    display: none;
+  }
+}
+.search-input {
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+  color: #f1f5f9;
+  padding-left: 20px;
+  font-size: 14px;
+  outline: none;
+}
+.search-button {
+  background-color: #272727;
+  border: none;
+  width: 45px;
+  height: 38px;
+  cursor: pointer;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.search-icon {
+  font-size: 16px;
+  color: #f1f5f9;
+}
+li {
+  list-style-type: none;
+  color: #f1f5f9;
+  margin-bottom: 15px;
+}
+.label-style {
+  font-size: 14px;
+  margin-left: 15px;
+  font-weight: 400;
+}
+.employment-heading {
+  color: #f1f5f9;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 15px;
+}
+.salary-range-heading {
+  color: #f1f5f9;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 25px;
+}
+.jobs-details-container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 576px) {
+  .jobs-details-container {
+    flex-grow: 1;
+  }
+  .sorting-details-container {
+    min-width: 350px;
+    margin-right: 35px;
+  }
+}
+.profile-name {
+  color: #6366f1;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.profile-pic {
+  height: 45px;
+}
+.profile-description {
+  color: #2c364c;
+  font-size: 12px;
+  font-weight: normal;
+}
+@media screen and (min-width: 576px) {
+  .profile-description {
+    font-size: 16px;
+  }
+  .profile-name {
+    font-size: 22px;
+  }
+}
+.retry-button {
+  background-color: #6366f1;
+  border: none;
+  border-radius: 5px;
+  color: #f8fafc;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 90px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.failure-profile-container {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  height: 150px;
+}
+.failure-Jobs-View {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  align-items: center;
+}
+.failure-jobs-image {
+  width: 100%;
+}
+.failure-view-heading {
+  color: #f1f5f9;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.failure-view-subheading {
+  color: #f1f5f9;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 10px;
+}
+@media screen and (min-width: 576px) {
+  .failure-view-heading {
+    color: #f1f5f9;
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  .failure-view-subheading {
+    color: #f1f5f9;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 10px;
+  }
+  .failure-jobs-image {
+    width: 400px;
+    margin-top: 50px;
+  }
+}

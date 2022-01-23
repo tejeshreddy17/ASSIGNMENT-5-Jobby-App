@@ -1,0 +1,93 @@
+.job-link {
+  text-decoration: none;
+}
+.job-card-background {
+  color: #f1f5f9;
+  background-color: #202020;
+  margin-bottom: 15px;
+  padding: 25px 20px 20px 15px;
+  border-radius: 15px;
+  line-height: 1.5;
+}
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.job-card-logo-style {
+  height: 55px;
+}
+.job-card-title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 15px;
+}
+.job-card-title {
+  font-size: 16px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.job-card-rating-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.job-card-rating-icon {
+  color: #fbbf24;
+  font-size: 16px;
+  margin-right: 5px;
+  margin-bottom: 0px;
+}
+.job-card-rating {
+  font-size: 18px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.location-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+}
+.location-type-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+}
+.location-icon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 20px;
+}
+.style-1 {
+  font-weight: 400;
+  font-size: 12px;
+  margin-left: 5px;
+}
+.style-2 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.job-card-description-heading {
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #f8fafc;
+}
+.job-card-description {
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: justify;
+}
