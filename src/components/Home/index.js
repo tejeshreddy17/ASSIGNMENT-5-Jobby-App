@@ -1,23 +1,12 @@
 import {Link} from 'react-router-dom'
 
-import Cookies from 'js-cookie'
 import './index.css'
-
-import {AiFillHome} from 'react-icons/ai'
-
-import {BsFillBriefcaseFill} from 'react-icons/bs'
-import {FiLogOut} from 'react-icons/fi'
 
 import Header from '../Header'
 
 const Home = props => {
   console.log(props)
 
-  const onLoggingOut = () => {
-    const {history} = props
-    Cookies.remove('loginToken')
-    history.replace('/login')
-  }
   return (
     <>
       <Header />

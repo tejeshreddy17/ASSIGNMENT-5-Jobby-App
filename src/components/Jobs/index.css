@@ -24,6 +24,12 @@
   height: 150px;
   margin-bottom: 15px;
 }
+@media screen {
+  .profile-background {
+    margin-top: 0px;
+  }
+}
+
 hr {
   width: 100%;
   border: 1px solid #475569;

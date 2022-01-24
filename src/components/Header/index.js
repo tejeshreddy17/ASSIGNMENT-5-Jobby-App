@@ -26,11 +26,15 @@ const Header = props => {
       </Link>
       <div className="large-devices-buttons">
         <Link to="/">
-          <button className="home-jobs-button">Home</button>
+          <button type="button" className="home-jobs-button">
+            Home
+          </button>
         </Link>
 
         <Link to="/jobs">
-          <button className="home-jobs-button">Jobs</button>
+          <button type="button" className="home-jobs-button">
+            Jobs
+          </button>
         </Link>
       </div>
       <div className="small-devices-buttons">

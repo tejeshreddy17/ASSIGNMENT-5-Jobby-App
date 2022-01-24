@@ -51,6 +51,7 @@ const loadingStatus = {
   success: 'SUCCESS',
   loading: 'LOADING',
   failure: 'FAILURE',
+  noJobsView: 'noJobsView',
 }
 
 class Jobs extends Component {
@@ -164,7 +165,7 @@ class Jobs extends Component {
       }
       this.setState({
         jobDetails: formattedJobDetails,
-        loadingStatusconstants: loadingStatus.failure,
+        loadingStatusconstants: loadingStatus.success,
       })
     } else {
       this.setState({loadingStatusconstants: loadingStatus.failure})
@@ -208,6 +209,20 @@ class Jobs extends Component {
     const {jobsList} = jobDetails
     switch (loadingStatusconstants) {
       case 'SUCCESS':
+        if (jobsList.length === 0) {
+          return (
+            <div className="failure-Jobs-View">
+              <img
+                src="https://assets.ccbp.in/frontend/react-js/no-jobs-img.png"
+                alt="no jobs"
+              />
+              <h1 className="failure-view-heading ">No Jobs Found</h1>
+              <p className="failure-view-subheading ">
+                We could not find any jobs. Try other filters.
+              </p>
+            </div>
+          )
+        }
         return jobsList.map(eachJob => (
           <JobCard jobDetail={eachJob} key={eachJob.id} />
         ))
@@ -254,8 +269,6 @@ class Jobs extends Component {
   )
 
   render() {
-    const {jobDetails} = this.state
-    const {jobsList} = jobDetails
     return (
       <div>
         <Header />
@@ -328,7 +341,6 @@ class Jobs extends Component {
                 <BsSearch className="search-icon" />
               </button>
             </div>
-
             {this.finalRenderingJobsList()}
           </div>
         </div>
