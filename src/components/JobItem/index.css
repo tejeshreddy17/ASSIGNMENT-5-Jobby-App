@@ -178,6 +178,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-left: 0px;
 }
 .each-skill-container {
   display: flex;
@@ -186,6 +187,14 @@
   justify-content: flex-start;
   width: 50%;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 576px) {
+  .each-skill-container {
+    width: 30%;
+  }
+  .skill-container {
+    justify-content: flex-start;
+  }
 }
 .skill-logo {
   height: 45px;
@@ -218,5 +227,20 @@
 @media screen and (min-width: 576px) {
   .similar-job-card-background {
     margin-right: 10px;
+  }
+}
+.life-at-company-desscription-container {
+  display: flex;
+  flex-direction: column;
+}
+.life-at-company-image {
+  width: 100%;
+}
+@media screen and (min-width: 576px) {
+  .life-at-company-desscription-container {
+    flex-direction: row;
+  }
+  .life-at-company-image {
+    margin-left: 25px;
   }
 }

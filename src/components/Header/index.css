@@ -8,7 +8,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 10px 15px 10px 15px;
 }
 .navbar-logo {
   width: 75px;
@@ -28,14 +28,39 @@
 
 .large-devices-buttons {
   display: none;
+  padding-left: 0px;
+  margin: 0px;
+}
+.small-devices-buttons {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0px;
+  align-items: center;
+}
+.list-item-style-small-devices {
+  margin-bottom: 0px;
 }
 @media screen and (min-width: 576px) {
   .small-devices-buttons {
     display: none;
   }
   .large-devices-buttons {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
+}
+.link-item-style {
+  text-decoration: none;
+  margin-left: 5px;
+}
+.header-list-style {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px;
 }
 .logout-button-large-devices {
   display: none;
@@ -78,4 +103,9 @@
 .icons-color {
   color: #f8fafc;
   font-size: 22px;
+}
+.icon-button-logout-icon-small-devices {
+  margin-left: 15px;
+  background-color: transparent;
+  border: none;
 }

@@ -161,7 +161,7 @@ class JobItem extends Component {
           </div>
           <hr />
           <div className="job-item-description-container">
-            <p className="job-item-description-heading">Description</p>
+            <h1 className="job-item-description-heading">Description</h1>
             <a className="website-element" href={companyWebsiteUrl}>
               Visit
               <HiOutlineExternalLink className="website-redirect-icon" />
@@ -172,8 +172,14 @@ class JobItem extends Component {
           <ul className="skill-container">{this.renderingSkills()}</ul>
 
           <h1 className="job-item-description-heading">Life at Company</h1>
-          <p>{lifeAtCompanyDescription}</p>
-          <img alt="life at company" src={lifeAtCompanyImageUrl} />
+          <div className="life-at-company-desscription-container">
+            <p className="job-item-description">{lifeAtCompanyDescription}</p>
+            <img
+              className="life-at-company-image"
+              alt="life at company"
+              src={lifeAtCompanyImageUrl}
+            />
+          </div>
         </div>
         <h1 className="similar-job-heading">Similar Jobs</h1>
         <ul className="similar-job-container">

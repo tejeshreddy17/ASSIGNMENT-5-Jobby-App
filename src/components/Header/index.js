@@ -25,32 +25,40 @@ const Header = props => {
         />
       </Link>
       <ul className="large-devices-buttons">
-        <Link to="/">
-          <button type="button" className="home-jobs-button">
-            Home
-          </button>
+        <Link className="link-item-style" to="/">
+          <li className="header-list-style">
+            <button type="button" className="home-jobs-button">
+              Home
+            </button>
+          </li>
         </Link>
 
-        <Link to="/jobs">
-          <button type="button" className="home-jobs-button">
-            Jobs
-          </button>
+        <Link className="link-item-style" to="/jobs">
+          <li className="header-list-style">
+            <button type="button" className="home-jobs-button">
+              Jobs
+            </button>
+          </li>
         </Link>
       </ul>
       <ul className="small-devices-buttons">
-        <Link to="/">
-          <button type="button" className="icon-button">
-            <AiFillHome className="icons-color" />
-          </button>
+        <Link className="link-item-style" to="/">
+          <li className="list-item-style-small-devices">
+            <button type="button" className="icon-button">
+              <AiFillHome className="icons-color" />
+            </button>
+          </li>
         </Link>
-        <Link to="/jobs">
-          <button type="button" className="icon-button">
-            <BsFillBriefcaseFill className="icons-color" />
-          </button>
+        <Link className="link-item-style" to="/jobs">
+          <li className="list-item-style-small-devices">
+            <button type="button" className="icon-button">
+              <BsFillBriefcaseFill className="icons-color" />
+            </button>
+          </li>
         </Link>
         <button
           type="button"
-          className="icon-button logout-icon-small-devices"
+          className="icon-button-logout-icon-small-devices"
           onClick={onLoggingOut}
         >
           <FiLogOut className="icons-color" />

@@ -6,6 +6,8 @@ import {AiFillStar} from 'react-icons/ai'
 
 import {MdLocationOn} from 'react-icons/md'
 
+import './index.css'
+
 const SimilarJobs = props => {
   const {SimilarJob} = props
   const {
@@ -34,8 +36,8 @@ const SimilarJobs = props => {
             </div>
           </div>
         </div>
-        <h1 className="job-card-description-heading">Description</h1>
-        <p className="job-card-description">{jobDescription}</p>
+        <h1 className="similar-job-card-description-heading">Description</h1>
+        <p className="similar-job-card-description">{jobDescription}</p>
         <div className="location-container">
           <div className="location-type-container">
             <div className="location-icon-container">
