@@ -21,7 +21,6 @@ const Home = props => {
             Find Jobs
           </button>
         </Link>
-        <li></li>
       </div>
     </>
   )
