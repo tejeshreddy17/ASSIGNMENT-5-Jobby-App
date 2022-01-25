@@ -23,7 +23,7 @@ const JobCard = props => {
 
   return (
     <Link className="job-link" to={`/jobs/${id}`}>
-      <div className="job-card-background">
+      <li className="job-card-background">
         <div className="logo-container">
           <img
             className="job-card-logo-style"
@@ -53,9 +53,9 @@ const JobCard = props => {
           <p className="style-2">{packagePerAnnum}</p>
         </div>
         <hr />
-        <p className="job-card-description-heading">Description</p>
+        <h1 className="job-card-description-heading">Description</h1>
         <p className="job-card-description">{jobDescription}</p>
-      </div>
+      </li>
     </Link>
   )
 }

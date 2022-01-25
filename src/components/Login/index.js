@@ -9,7 +9,7 @@ class LoginForm extends Component {
 
   onSuccessLogin = jwtToken => {
     const {history} = this.props
-    Cookies.set('loginToken', jwtToken, {expires: 1})
+    Cookies.set('jwt_token', jwtToken, {expires: 1})
     history.replace('/')
   }
 
@@ -46,8 +46,8 @@ class LoginForm extends Component {
   }
 
   render() {
-    const {showLoginError, errMsg} = this.state
-    const jwtToken = Cookies.get('loginToken')
+    const {showLoginError, errMsg, username, password} = this.state
+    const jwtToken = Cookies.get('jwt_token')
 
     if (jwtToken !== undefined) {
       return <Redirect to="/" />
@@ -56,7 +56,7 @@ class LoginForm extends Component {
       <div className="login-background">
         <form onSubmit={this.onLoggingIn} className="login-form">
           <img
-            alt="logo"
+            alt="website logo"
             className="logo-style"
             src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
           />
@@ -64,19 +64,23 @@ class LoginForm extends Component {
             USERNAME
           </label>
           <input
+            id="username"
             onChange={this.onChangingUserName}
             className="input-style"
             placeholder="username"
             type="text"
+            value={username}
           />
           <label className="label-style" htmlFor="password">
             PASSWORD
           </label>
           <input
+            id="password"
             onChange={this.onChangingPassword}
             className="input-style"
             placeholder="password"
             type="password"
+            value={password}
           />
           <button className="login-button-style" type="submit">
             Login

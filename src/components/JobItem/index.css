@@ -9,6 +9,12 @@
   flex-direction: column;
   padding: 15px;
 }
+@media screen and (min-width: 576px) {
+  .jobsList-main-background {
+    padding: 25px 50px 25px 50px;
+  }
+}
+
 .job-item-background {
   color: #f1f5f9;
   background-color: #202020;
@@ -16,6 +22,11 @@
   padding: 25px 20px 20px 15px;
   border-radius: 15px;
   line-height: 1.5;
+}
+@media screen and (min-width: 576px) {
+  .job-item-background {
+    padding: 50px 35px 35px 35px;
+  }
 }
 .job-item-logo-container {
   display: flex;
@@ -26,6 +37,7 @@
 .job-item-logo-style {
   height: 55px;
 }
+
 .job-item-title-container {
   display: flex;
   flex-direction: column;
@@ -56,6 +68,22 @@
   margin-top: 0px;
   margin-bottom: 0px;
 }
+@media screen and (min-width: 576px) {
+  .job-item-logo-style {
+    height: 100px;
+  }
+  .job-item-title {
+    font-size: 32px;
+    margin-bottom: 18px;
+  }
+  .job-item-rating-icon {
+    font-size: 24px;
+  }
+
+  .job-item-rating {
+    font-size: 24px;
+  }
+}
 .job-item-location-container {
   display: flex;
   flex-direction: row;
@@ -82,9 +110,26 @@
   font-size: 12px;
   margin-left: 5px;
 }
+
 .job-item-style-2 {
   margin-top: 0px;
   margin-bottom: 0px;
+}
+@media screen and (min-width: 576px) {
+  .job-item-style-1 {
+    font-size: 16px;
+  }
+  .job-item-icon-1 {
+    font-size: 22px;
+    margin-right: 4px;
+  }
+  .job-item-icon {
+    font-size: 22px;
+    margin-right: 4px;
+  }
+  .job-item-style-2 {
+    font-size: 20px;
+  }
 }
 .job-item-description-container {
   display: flex;
@@ -106,6 +151,17 @@
   margin-top: 5px;
   text-align: justify;
   line-height: 1.8;
+}
+@media screen and (min-width: 576px) {
+  .job-item-description-container {
+    line-height: 1;
+  }
+  .job-item-description-heading {
+    font-size: 26px;
+  }
+  .job-item-description {
+    font-size: 20px;
+  }
 }
 .website-element {
   display: flex;
@@ -134,4 +190,33 @@
 .skill-logo {
   height: 45px;
   margin-right: 15px;
+}
+
+.similar-job-heading {
+  color: #f1f5f9;
+}
+.similar-job-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 0px;
+}
+@media screen and (min-width: 576px) {
+  .similar-job-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.similar-job-card-background {
+  color: #f1f5f9;
+  background-color: #202020;
+  margin-bottom: 15px;
+  padding: 25px 20px 20px 15px;
+  border-radius: 15px;
+  line-height: 1.5;
+}
+@media screen and (min-width: 576px) {
+  .similar-job-card-background {
+    margin-right: 10px;
+  }
 }

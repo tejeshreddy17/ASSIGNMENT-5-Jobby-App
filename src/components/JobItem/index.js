@@ -42,7 +42,7 @@ class JobItem extends Component {
 
   gettingJobItem = async () => {
     this.setState({loadingStatusconstants: loadingStatus.loading})
-    const token = Cookies.get('loginToken')
+    const token = Cookies.get('jwt_token')
     const {match} = this.props
     const {params} = match
     const {id} = params
@@ -148,11 +148,11 @@ class JobItem extends Component {
           <div className="job-item-location-container">
             <div className="job-item-location-type-container">
               <div className="job-item-location-icon-container">
-                <MdLocationOn />
+                <MdLocationOn className="job-item-icon" />
                 <p className="job-item-style-1">{location}</p>
               </div>
               <div className="job-item-location-icon-container">
-                <BsFillBriefcaseFill />
+                <BsFillBriefcaseFill className="job-item-icon-1" />
                 <p className="job-item-style-1">{employmentType}</p>
               </div>
             </div>
@@ -168,17 +168,19 @@ class JobItem extends Component {
             </a>
           </div>
           <p className="job-item-description">{jobDescription}</p>
-          <p className="job-item-description-heading">Skills</p>
-          <div className="skill-container">{this.renderingSkills()}</div>
+          <h1 className="job-item-description-heading">Skills</h1>
+          <ul className="skill-container">{this.renderingSkills()}</ul>
 
-          <p className="job-item-description-heading">Life at Company</p>
+          <h1 className="job-item-description-heading">Life at Company</h1>
           <p>{lifeAtCompanyDescription}</p>
           <img alt="life at company" src={lifeAtCompanyImageUrl} />
         </div>
-        <h1>Similar Jobs</h1>
-        {similarJobs.map(eachJob => (
-          <SimilarJobs SimilarJob={eachJob} key={eachJob.id} />
-        ))}
+        <h1 className="similar-job-heading">Similar Jobs</h1>
+        <ul className="similar-job-container">
+          {similarJobs.map(eachJob => (
+            <SimilarJobs SimilarJob={eachJob} key={eachJob.id} />
+          ))}
+        </ul>
       </>
     )
   }
@@ -211,7 +213,7 @@ class JobItem extends Component {
               </div>
             </div>
           </div>
-          <p className="job-card-description-heading">Description</p>
+          <h1 className="job-card-description-heading">Description</h1>
           <p className="job-card-description">{jobDescription}</p>
           <div className="location-container">
             <div className="location-type-container">

@@ -12,19 +12,19 @@ import {FiLogOut} from 'react-icons/fi'
 const Header = props => {
   const onLoggingOut = () => {
     const {history} = props
-    Cookies.remove('loginToken')
+    Cookies.remove('jwt_token')
     history.replace('/login')
   }
   return (
     <nav className="navbar-section">
       <Link to="/">
         <img
-          alt="logo"
+          alt="website logo"
           src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
           className="navbar-logo"
         />
       </Link>
-      <div className="large-devices-buttons">
+      <ul className="large-devices-buttons">
         <Link to="/">
           <button type="button" className="home-jobs-button">
             Home
@@ -36,8 +36,8 @@ const Header = props => {
             Jobs
           </button>
         </Link>
-      </div>
-      <div className="small-devices-buttons">
+      </ul>
+      <ul className="small-devices-buttons">
         <Link to="/">
           <button type="button" className="icon-button">
             <AiFillHome className="icons-color" />
@@ -55,7 +55,7 @@ const Header = props => {
         >
           <FiLogOut className="icons-color" />
         </button>
-      </div>
+      </ul>
 
       <button
         onClick={onLoggingOut}

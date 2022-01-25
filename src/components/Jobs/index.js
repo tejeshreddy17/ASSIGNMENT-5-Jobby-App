@@ -105,7 +105,7 @@ class Jobs extends Component {
     this.setState({loadingStatusProfileconstants: loadingStatus.loading})
 
     const url = 'https://apis.ccbp.in/profile'
-    const token = Cookies.get('loginToken')
+    const token = Cookies.get('jwt_token')
 
     const options = {
       headers: {
@@ -138,7 +138,7 @@ class Jobs extends Component {
     const url = `https://apis.ccbp.in/jobs?employment_type=${employmentType.join(
       ',',
     )}&minimum_package=${salaryRange}&search=${searchedString}`
-    const token = Cookies.get('loginToken')
+    const token = Cookies.get('jwt_token')
     const options = {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -223,9 +223,14 @@ class Jobs extends Component {
             </div>
           )
         }
-        return jobsList.map(eachJob => (
-          <JobCard jobDetail={eachJob} key={eachJob.id} />
-        ))
+        return (
+          <ul className="jobs-list-ul-container">
+            {jobsList.map(eachJob => (
+              <JobCard jobDetail={eachJob} key={eachJob.id} />
+            ))}
+          </ul>
+        )
+
       case 'FAILURE':
         return this.failureJobsView()
       case 'LOADING':
@@ -292,32 +297,34 @@ class Jobs extends Component {
           <div className="sorting-details-container">
             {this.finalRenderingProfile()}
             <hr />
-            <p className="employment-heading">Types of Employment</p>
+            <h1 className="employment-heading">Type of Employment</h1>
             {employmentTypesList.map(eachType => (
-              <li>
+              <li key={eachType.employmentTypeId}>
                 <input
+                  id={eachType.label}
                   onChange={this.onSelectingEmploymentType}
                   type="checkbox"
                   value={eachType.employmentTypeId}
                 />
-                <label className="label-style" htmlFor="checkbox">
+                <label className="label-style" htmlFor={eachType.label}>
                   {eachType.label}
                 </label>
               </li>
             ))}
             <hr />
-            <p className="salary-range-heading">Salary Range</p>
+            <h1 className="salary-range-heading">Salary Range</h1>
 
             {salaryRangesList.map(eachType => (
-              <li>
+              <li key={eachType.salaryRangeId}>
                 <input
+                  id={eachType.label}
                   className="input"
                   onChange={this.onSelectingSalaryType}
                   type="radio"
                   value={eachType.salaryRangeId}
                   name="salaryGroup"
                 />
-                <label className="label-style" htmlFor="checkbox">
+                <label className="label-style" htmlFor={eachType.label}>
                   {eachType.label}
                 </label>
               </li>
